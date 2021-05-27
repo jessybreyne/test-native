@@ -13,7 +13,7 @@ const { Navigator, Screen } = createStackNavigator();
 
 const Root = () => (
   <Navigator>
-    <Screen options={{ŧitle: "Home page"}} name="Home" component={HomeScreen} />
+    <Screen options={{ŧitle: "Home page", headerStyle: {borderWidth:3,borderColor: "orange"}}} name="Home" component={HomeScreen} />
     <Screen name="Profil" component={ProfileScreen} />
   </Navigator>
 );
@@ -45,6 +45,7 @@ export default function App() {
             headerTitleStyle: {
               fontWeight: "bold",
             },
+            headerLeft: null
           }} name="Login" component={LoginScreen} />
           <Screen options={{headerShown: false}} name="Root" component={Root} />
       </Navigator>
