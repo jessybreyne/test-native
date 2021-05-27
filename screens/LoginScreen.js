@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
 const LoginScreen = (props) => {
+
+  useEffect(() => {
+    console.log("props", props);
+  })
   return (
     <View style={styles.container}>
-      <Text>Home screen</Text>
+      <Text>Nom : {props.route.params.nom}</Text>
+      <Text>Age : {props.route.params.age}</Text>
     </View>
   )
 }

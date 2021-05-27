@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import { Header, View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
 const WelcomeScreen = (props) => {
 
   const goTo = () => {
     // console.log('props', props);
-    props.navigation.navigate('Login')
+    props.navigation.navigate('Login', 
+    {
+      nom: "Julien",
+      age: 56
+    })
   }
   return (
     <View style={styles.container}>
@@ -16,7 +20,7 @@ const WelcomeScreen = (props) => {
         </View>
       </TouchableOpacity>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({

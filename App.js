@@ -13,8 +13,30 @@ export default function App() {
   return (
     <NavigationContainer>
       <Navigator>
-        <Screen name="Welcome" component={WelComeScreen}/>
-        <Screen name="Login" component={LoginScreen}/>
+        <Screen
+          options={{
+            title: "My home",
+            headerStyle: {
+              backgroundColor: "#f4511e",
+            },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+          name="Welcome"
+          component={WelComeScreen}
+        />
+        <Screen options={{
+            title: "Login page",
+            headerStyle: {
+              backgroundColor: "#fff",
+            },
+            headerTintColor: "#000",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }} name="Login" component={LoginScreen} />
       </Navigator>
     </NavigationContainer>
   );
