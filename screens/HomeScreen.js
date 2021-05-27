@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native'
 
 const HomeScreen = (props) => {
+
+  useEffect(() => {
+    console.log(props.route.params.frameworks)
+
+  }, [])
   return (
     <View style={styles.container}>
-      <Text>Home screen</Text>
+      <Text>Célibataire : {props.route.params.celibataire ? "Oui" : "Non"}</Text>
     </View>
   )
 }

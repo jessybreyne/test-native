@@ -11,12 +11,13 @@ const WelcomeScreen = (props) => {
       age: 56
     })
   }
+
   return (
     <View style={styles.container}>
       <Text>Home screen</Text>
       <TouchableOpacity onPress={goTo}>
         <View style={styles.button}>
-          <Text>Aller à Home</Text>
+          <Text>Aller à Login</Text>
         </View>
       </TouchableOpacity>
     </View>
