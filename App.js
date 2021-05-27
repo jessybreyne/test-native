@@ -12,7 +12,7 @@ import ProfileScreen from './screens/ProfileScreen';
 const { Navigator, Screen } = createStackNavigator();
 
 const Root = () => (
-  <Navigator>
+  <Navigator >
     <Screen options={{ŧitle: "Home page", headerStyle: {borderWidth:3,borderColor: "orange"}}} name="Home" component={HomeScreen} />
     <Screen name="Profil" component={ProfileScreen} />
   </Navigator>
@@ -21,9 +21,7 @@ const Root = () => (
 export default function App() {
   return (
     <NavigationContainer>
-      <Navigator>
-        <Screen
-          options={{
+      <Navigator screenOptions={{
             title: "Welcome page",
             headerStyle: {
               backgroundColor: "#f4511e",
@@ -32,7 +30,8 @@ export default function App() {
             headerTitleStyle: {
               fontWeight: "bold",
             },
-          }}
+          }}>
+        <Screen
           name="Welcome"
           component={WelComeScreen}
         />
